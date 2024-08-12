@@ -1,0 +1,21 @@
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 100%;
+    max-height: 100vh;
+    background: linear-gradient(185deg, #3b4dee,#045610,);
+}
+head {
+    background-image: -o-linear-gradient(68);
+    background-color: rgba(255, 94, 0, 0.596);
+}
+h2 {
+    font-size: medium;
+    font-family: cursive;
+    text-align: center;
+    text-overflow: initial;
+}
