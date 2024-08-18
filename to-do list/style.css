@@ -1,23 +1,82 @@
 *{
-    margin: 0;
+    margin: 0;/* overall page design*/
     padding:0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-.container {
+ .container { /*selectors for class (.)*/
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(185deg, #3b3ee3,#045610);
-    font-size: medium;
-    font-family: cursive;
-    text-align: center;
-    text-overflow: initial;
+    background: linear-gradient(to bottom right,#4400ff,#ff2b2b); /* good colour combo is imp*/
+    font-size: medium;     
+    font-family: cursive; 
+    text-align: left;
+    overflow: hidden;
 }
 .To-do-app{
     margin: 100px auto;
     width: auto;
     max-width: 545px;
-    background-color: maroon;
-    padding: 30px 40px 70px;
+    background-color: rgb(69, 167, 56);
+    padding: 40px 50px 70px;
     border-radius: 8px;
+}
+.To-do-app:hover{
+     box-shadow: 1px 2px 2px 3px rgb(0, 0, 0); /*top, right, bottom, left*/
+}
+.row{
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(252, 236, 12);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding-left:20px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+}
+button{
+    border-radius: 10px;
+    outline: none;
+    color: currentColor;
+    background-color: rgb(12, 153, 42);
+    padding: 5%;
+
+}
+button:hover{
+    background-color: #045610;
+}
+ul li::before{
+    height: 28px;
+    width: 28px;
+    content: '';
+    position: absolute;
+    background-image: url(images/unchecked.png); 
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    bottom: 8px;
+    left: 10px;
+}
+ul li
+{
+      list-style: none;
+      font-size: 17px;
+      padding: 12px 8px 12px 50px;
+      user-select: none;
+      cursor: pointer;
+      position: relative;
+}
+ul li.checked::before{
+      color: #666;
+      background-image: url(images/checked.png);
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
 }
